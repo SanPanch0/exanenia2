@@ -1,0 +1,17 @@
+# Proyecto CNN CIFAR-10 — SEMILLA = 65
+# Probado con: Python 3.13, torch 2.15.0, torchvision 0.29.2, numpy 2.5.3,
+#              matplotlib 3.11.2, scikit-learn 1.9.1
+# Se fijan versiones mínimas (no exactas) para que pip elija las compatibles
+# con su versión de Python. Python recomendado: 3.10 – 3.13.
+#
+# En Windows, "pip install torch" instala la versión para CPU. Si tiene GPU NVIDIA,
+# instale antes torch/torchvision con el comando de https://pytorch.org/get-started/locally/
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+matplotlib>=3.7
+scikit-learn>=1.3
+pillow>=10.0
+jupyter>=1.0
+ipykernel>=6.25
+pytest>=7.4

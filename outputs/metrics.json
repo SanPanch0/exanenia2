@@ -1,0 +1,420 @@
+{
+  "proyecto": "Clasificación de CIFAR-10 con CNN",
+  "institucion": "Universidad Andina del Cusco",
+  "curso": "Inteligencia Artificial",
+  "codigo_matricula": "021101465",
+  "SEMILLA": 65,
+  "tipo_ejecucion": "entrenamiento_definitivo",
+  "fecha": "2026-10-28T21:46:48",
+  "nota": null,
+  "entorno": {
+    "python": "3.13.15",
+    "pytorch": "2.14.1+cpu",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "dispositivo": "cpu"
+  },
+  "hiperparametros": {
+    "epochs": 20,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0005,
+    "optimizador": "Adam",
+    "funcion_perdida": "CrossEntropyLoss",
+    "val_fraction": 0.1,
+    "data_augmentation": [
+      "RandomCrop(32, padding=4)",
+      "RandomHorizontalFlip(p=0.5)"
+    ],
+    "normalizacion": {
+      "mean": [
+        0.4914,
+        0.4822,
+        0.4465
+      ],
+      "std": [
+        0.247,
+        0.2435,
+        0.2616
+      ]
+    }
+  },
+  "particion": {
+    "n_train": 45000,
+    "n_val": 5000,
+    "n_test": 10000,
+    "dist_train": {
+      "airplane": 4500,
+      "automobile": 4500,
+      "bird": 4500,
+      "cat": 4500,
+      "deer": 4500,
+      "dog": 4500,
+      "frog": 4500,
+      "horse": 4500,
+      "ship": 4500,
+      "truck": 4500
+    },
+    "dist_val": {
+      "airplane": 500,
+      "automobile": 500,
+      "bird": 500,
+      "cat": 500,
+      "deer": 500,
+      "dog": 500,
+      "frog": 500,
+      "horse": 500,
+      "ship": 500,
+      "truck": 500
+    },
+    "dist_test": {
+      "airplane": 1000,
+      "automobile": 1000,
+      "bird": 1000,
+      "cat": 1000,
+      "deer": 1000,
+      "dog": 1000,
+      "frog": 1000,
+      "horse": 1000,
+      "ship": 1000,
+      "truck": 1000
+    }
+  },
+  "parametros_entrenables": 620810,
+  "tiempo_total_s": 847.4,
+  "mejor_epoca_validacion": 20,
+  "mejor_val_accuracy": 0.796,
+  "ultima_epoca": {
+    "train_loss": 0.6731,
+    "train_accuracy": 0.7726,
+    "val_loss": 0.6031,
+    "val_accuracy": 0.796
+  },
+  "test": {
+    "loss": 0.6052,
+    "accuracy": 0.7926,
+    "precision_macro": 0.8006,
+    "recall_macro": 0.7926,
+    "f1_macro": 0.7937,
+    "precision_weighted": 0.8006,
+    "recall_weighted": 0.7926,
+    "f1_weighted": 0.7937
+  },
+  "reporte_por_clase": {
+    "airplane": {
+      "precision": 0.8117,
+      "recall": 0.819,
+      "f1-score": 0.8153,
+      "support": 1000.0
+    },
+    "automobile": {
+      "precision": 0.8752,
+      "recall": 0.933,
+      "f1-score": 0.9032,
+      "support": 1000.0
+    },
+    "bird": {
+      "precision": 0.7754,
+      "recall": 0.656,
+      "f1-score": 0.7107,
+      "support": 1000.0
+    },
+    "cat": {
+      "precision": 0.6103,
+      "recall": 0.631,
+      "f1-score": 0.6205,
+      "support": 1000.0
+    },
+    "deer": {
+      "precision": 0.8273,
+      "recall": 0.728,
+      "f1-score": 0.7745,
+      "support": 1000.0
+    },
+    "dog": {
+      "precision": 0.6312,
+      "recall": 0.813,
+      "f1-score": 0.7107,
+      "support": 1000.0
+    },
+    "frog": {
+      "precision": 0.8368,
+      "recall": 0.851,
+      "f1-score": 0.8438,
+      "support": 1000.0
+    },
+    "horse": {
+      "precision": 0.7836,
+      "recall": 0.858,
+      "f1-score": 0.8191,
+      "support": 1000.0
+    },
+    "ship": {
+      "precision": 0.9285,
+      "recall": 0.831,
+      "f1-score": 0.877,
+      "support": 1000.0
+    },
+    "truck": {
+      "precision": 0.9264,
+      "recall": 0.806,
+      "f1-score": 0.862,
+      "support": 1000.0
+    }
+  },
+  "matriz_confusion": [
+    [
+      819,
+      14,
+      39,
+      34,
+      7,
+      7,
+      10,
+      26,
+      31,
+      13
+    ],
+    [
+      12,
+      933,
+      0,
+      7,
+      1,
+      4,
+      5,
+      6,
+      9,
+      23
+    ],
+    [
+      45,
+      1,
+      656,
+      56,
+      52,
+      85,
+      59,
+      37,
+      5,
+      4
+    ],
+    [
+      11,
+      0,
+      29,
+      631,
+      29,
+      227,
+      32,
+      33,
+      6,
+      2
+    ],
+    [
+      8,
+      1,
+      41,
+      64,
+      728,
+      45,
+      45,
+      67,
+      1,
+      0
+    ],
+    [
+      6,
+      2,
+      15,
+      99,
+      29,
+      813,
+      5,
+      29,
+      1,
+      1
+    ],
+    [
+      5,
+      0,
+      29,
+      62,
+      17,
+      28,
+      851,
+      6,
+      1,
+      1
+    ],
+    [
+      8,
+      3,
+      22,
+      27,
+      15,
+      61,
+      2,
+      858,
+      0,
+      4
+    ],
+    [
+      63,
+      15,
+      13,
+      37,
+      2,
+      5,
+      5,
+      13,
+      831,
+      16
+    ],
+    [
+      32,
+      97,
+      2,
+      17,
+      0,
+      13,
+      3,
+      20,
+      10,
+      806
+    ]
+  ],
+  "historial": {
+    "epoch": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0,
+      13.0,
+      14.0,
+      15.0,
+      16.0,
+      17.0,
+      18.0,
+      19.0,
+      20.0
+    ],
+    "train_loss": [
+      1.5833,
+      1.2548,
+      1.1334,
+      1.0542,
+      0.9883,
+      0.9491,
+      0.9123,
+      0.883,
+      0.8531,
+      0.8315,
+      0.8071,
+      0.7864,
+      0.7676,
+      0.7493,
+      0.7321,
+      0.7253,
+      0.7091,
+      0.6965,
+      0.6799,
+      0.6731
+    ],
+    "train_acc": [
+      0.4159,
+      0.5497,
+      0.599,
+      0.6275,
+      0.6532,
+      0.6654,
+      0.6806,
+      0.6914,
+      0.7028,
+      0.7129,
+      0.7215,
+      0.7287,
+      0.7341,
+      0.7422,
+      0.7469,
+      0.751,
+      0.7561,
+      0.764,
+      0.7702,
+      0.7726
+    ],
+    "val_loss": [
+      1.3315,
+      1.1451,
+      0.9181,
+      0.9351,
+      0.8735,
+      0.7882,
+      0.7135,
+      0.7752,
+      0.7042,
+      0.7153,
+      0.6771,
+      0.7051,
+      0.6914,
+      0.6542,
+      0.6026,
+      0.5989,
+      0.5926,
+      0.5788,
+      0.6519,
+      0.6031
+    ],
+    "val_acc": [
+      0.5342,
+      0.5962,
+      0.6642,
+      0.6664,
+      0.695,
+      0.7124,
+      0.7468,
+      0.7288,
+      0.7422,
+      0.7506,
+      0.7636,
+      0.7496,
+      0.759,
+      0.774,
+      0.7876,
+      0.7892,
+      0.7898,
+      0.7942,
+      0.7748,
+      0.796
+    ],
+    "time_s": [
+      94.9393,
+      33.7247,
+      47.8102,
+      30.5895,
+      33.3821,
+      34.5488,
+      34.5677,
+      33.705,
+      35.2171,
+      36.6582,
+      37.8308,
+      39.217,
+      41.3154,
+      42.0901,
+      41.4184,
+      41.5917,
+      68.389,
+      39.7614,
+      40.4804,
+      40.1381
+    ]
+  }
+}
